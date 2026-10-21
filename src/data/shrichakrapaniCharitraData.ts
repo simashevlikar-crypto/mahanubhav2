@@ -13,7 +13,7 @@ export const shrichakrapaniCharitraBook: Book = {
   description: 'भगवान श्री चक्रपाणी प्रभू (फलटण) यांचे पावन जीवनचरित्र - संपूर्ण २५ लीळा पावन पाठ व सविस्तर निरूपण भावार्थ.',
   descriptionEn: 'Sacred life, leelas, and spiritual teachings of Bhagavan Shree Chakrapani Prabhu (Complete 25 Leelas).',
   category: 'pramukh_granth',
-  chaptersCount: 25,
+  chaptersCount: 0,
   coverImage: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=600&auto=format&fit=crop'
 };
 

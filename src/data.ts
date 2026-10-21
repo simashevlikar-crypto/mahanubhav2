@@ -36,6 +36,54 @@ import { shrichakrapaniStotraBook, shrichakrapaniStotraChapters } from './data/s
 import { shrichakrapaniCharitraBook, shrichakrapaniCharitraChapters } from './data/shrichakrapaniCharitraData';
 import { pramukhSthanancheGalfeBook, pramukhSthanancheGalfeChapters } from './data/pramukhSthanancheGalfeData';
 
+export const nirnaysindhuBook: Book = {
+  id: 'nirnaysindhu',
+  title: 'निर्णयसिंधू (Nirnaysindhu)',
+  titleEn: 'Nirnaysindhu',
+  author: 'महानुभाव पंथ / आचारधर्म संकलन',
+  description: 'महानुभाव पंथातील आचारधर्म, दिनचर्या, नियम, आचरण विधी व धार्मिक निर्णय याविषयीचा मार्गदर्शक प्रमाणग्रंथ.',
+  descriptionEn: 'Canonical treatise on code of conduct, daily observances, and disciplinary principles of the Mahanubhav Sect.',
+  category: 'pramukh_granth',
+  chaptersCount: 0,
+  coverImage: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=600&auto=format&fit=crop'
+};
+
+export const shrigovindprabhuCharitraBook: Book = {
+  id: 'shrigovindprabhu_charitra',
+  title: 'श्रीगोविंदप्रभू चरित्र (Shri Govindaprabhu Charitra)',
+  titleEn: 'Shri Govindaprabhu Charitra',
+  author: 'म्हाइंभट (Mhaimbhat)',
+  description: 'सर्वज्ञ श्रीचक्रधर स्वामींचे गुरु साक्षात परब्रह्मावतार भगवान श्रीगोविंदप्रभू (गुंडम राऊळ) यांच्या ऋद्धपूर येथील पावन लीळांचा चरित्रग्रंथ.',
+  descriptionEn: 'Sacred biography documenting the divine life and spontaneous leelas of Bhagavan Shree Govindaprabhu (Gundam Raul) at Riddhapur by Mhaimbhat.',
+  category: 'pramukh_granth',
+  chaptersCount: 0,
+  coverImage: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=600&auto=format&fit=crop'
+};
+
+export const shridattatreyaCharitraBook: Book = {
+  id: 'shreedattatreyacharitra',
+  title: 'श्रीदत्तात्रेय चरित्र (Shri Dattatreya Charitra)',
+  titleEn: 'Shri Dattatreya Charitra',
+  author: 'महानुभाव पंथ',
+  description: 'पंचकृष्णांमधील आद्य अवतारी भगवान श्रीदत्तात्रेय प्रभूंचे दिव्य चरित्र, माहूर माहात्म्य व २४ गुरूंचा आध्यात्मिक बोध.',
+  descriptionEn: 'The divine life, Mahur pilgrimages, and the profound wisdom of the 24 Gurus of Lord Dattatreya.',
+  category: 'pramukh_granth',
+  chaptersCount: 0,
+  coverImage: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=600&auto=format&fit=crop'
+};
+
+export const bhaskarBhatBorikarBook: Book = {
+  id: 'bhaskarbhat_borikar',
+  title: 'भास्करभट्ट बोरीकर (Bhaskar Bhat Borikar)',
+  titleEn: 'Bhaskar Bhat Borikar',
+  author: 'कवीश्वर भास्करभट्ट बोरीकर',
+  description: 'महानुभाव आद्य साहित्यातील श्रेष्ठ कवीश्वर भास्करभट्ट बोरीकर यांच्या अप्रतिम अभिजात रचना (शिशुपालवध, उद्धवगीता इ.) व वाङ्मय.',
+  descriptionEn: 'Classical literary masterpieces by the revered Mahanubhav poet Kavishwar Bhaskar Bhat Borikar, including Shishupalvadha and Uddhavgita.',
+  category: 'pramukh_granth',
+  chaptersCount: 0,
+  coverImage: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=600&auto=format&fit=crop'
+};
+
 export const initialBooks: Book[] = [
   {
     id: 'leela_charitra',
@@ -81,8 +129,14 @@ export const initialBooks: Book[] = [
     chaptersCount: 850,
     coverImage: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=600&auto=format&fit=crop'
   },
-  mahanubhavPanthParichayBook,
+  nirnaysindhuBook,
+  shrigovindprabhuCharitraBook,
+  shridattatreyaCharitraBook,
+  bhaskarBhatBorikarBook,
   mahanubhavTattvajnanaBook,
+  shrichakrapaniCharitraBook,
+  pramukhSthanancheGalfeBook,
+  mahanubhavPanthParichayBook,
   aartiBook,
   panchavtarUpharAartiBook,
   vidyachyaAartiBook,
@@ -116,9 +170,7 @@ export const initialBooks: Book[] = [
   vicharBandhBook,
   sankashtHaranStotraBook,
   sankashtNashakStotraBook,
-  shrichakrapaniStotraBook,
-  shrichakrapaniCharitraBook,
-  pramukhSthanancheGalfeBook
+  shrichakrapaniStotraBook
 ];
 
 export const initialChapters: Chapter[] = [
@@ -153,7 +205,6 @@ export const initialChapters: Chapter[] = [
   ...shriDattatrayKavachChapters,
   ...shrichakrapaniJanmadhyayChapters,
   ...mahanubhavPanthParichayChapters,
-  ...mahanubhavTattvajnanaChapters,
   ...shridattatreyaDarshanYachakStotraChapters,
   ...chintamaniStotraChapters,
   ...nirvedStotraChapters,
@@ -173,7 +224,6 @@ export const initialChapters: Chapter[] = [
   ...sankashtHaranStotraChapters,
   ...sankashtNashakStotraChapters,
   ...shrichakrapaniStotraChapters,
-  ...shrichakrapaniCharitraChapters,
   ...pramukhSthanancheGalfeChapters
 ];
 

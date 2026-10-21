@@ -8,7 +8,7 @@ export const mahanubhavTattvajnanaBook: Book = {
   description: 'महानुभाव पंथाचे मूळ दर्शन व तत्त्वज्ञान: चार नित्य पदार्थ (ईश्वर, जीव, देवता, प्रपंच), अहेतुक भूतभजन, ज्ञानाधिकार, अनुसरण, देवतांचे बहिर्याग व अंतर्याग स्वरूप, मोक्षसाधन व विचारमंथन.',
   descriptionEn: 'Core philosophical treatises of Mahanubhav philosophy covering Ishwar, Jeev, Devata, Prapanch, Anhetuk Bhootbhajan, and Anusaran.',
   category: 'pramukh_granth',
-  chaptersCount: 1,
+  chaptersCount: 0,
   coverImage: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=600&auto=format&fit=crop'
 };
 

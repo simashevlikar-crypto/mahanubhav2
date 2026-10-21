@@ -128,6 +128,7 @@ export default function Granthalaya({
           const foundChap = chapters.find(c => c.id === initialChapterId);
           if (foundChap) {
             setSelectedChapter(foundChap);
+            setShowGalfaTable(false);
           }
         }
       }
@@ -938,7 +939,7 @@ export default function Granthalaya({
                     <div key={chap.id} className="space-y-1">
                       <button
                         id={`chap-btn-${chap.id}`}
-                        onClick={() => { setSelectedChapter(chap); setShowGurusInfo(false); stopSpeech(); stopGuruSpeech(); }}
+                        onClick={() => { setSelectedChapter(chap); setShowGalfaTable(false); setShowGurusInfo(false); stopSpeech(); stopGuruSpeech(); }}
                         className={`w-full text-left p-2.5 rounded-lg text-xs md:text-sm transition-all flex items-center justify-between border cursor-pointer ${
                           selectedChapter?.id === chap.id
                             ? 'bg-saffron-500 text-white border-saffron-500 font-medium'
@@ -1199,7 +1200,7 @@ export default function Granthalaya({
                   )}
               </div>
             </div>
-          ) : (showGalfaTable || ((selectedBook?.id === 'sthan_galfa_maap' || selectedBook?.id === 'pramukh_sthananchya_galphache_map') && !selectedChapter)) ? (
+          ) : ((showGalfaTable || selectedBook?.id === 'sthan_galfa_maap' || selectedBook?.id === 'pramukh_sthananchya_galphache_map') && !selectedChapter) ? (
             <div className="flex-1 flex flex-col p-4 sm:p-6 overflow-y-auto max-h-[850px] custom-scrollbar bg-gradient-to-b from-amber-50/20 to-white">
               {/* Header Card */}
               <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 rounded-2xl p-4 sm:p-6 text-white shadow-lg border border-amber-300/40 relative overflow-hidden mb-6">
