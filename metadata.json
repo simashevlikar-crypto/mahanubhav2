@@ -1,0 +1,6 @@
+{
+  "name": "Mahanubhav Vishwa",
+  "description": "A comprehensive full-stack application for the Mahanubhav Sect, containing sacred texts (Granthalaya), bhajans, discourses (Pravachan), temple directories with navigation, calendar of events, community discussion board, donation platform, and an AI spiritual assistant based on Chakradhar Swami's teachings.",
+  "requestFramePermissions": ["geolocation", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

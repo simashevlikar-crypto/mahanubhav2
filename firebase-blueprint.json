@@ -1,0 +1,218 @@
+{
+  "entities": {
+    "sthan_darshan": {
+      "title": "Sthan Darshan Place",
+      "description": "Mahanubhav Panth holy places with geographical coordinates and spiritual history",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the place"
+        },
+        "number": {
+          "type": "integer",
+          "description": "Chapter or sequence number"
+        },
+        "title": {
+          "type": "string",
+          "description": "Name of the place in Devanagari"
+        },
+        "titleEn": {
+          "type": "string",
+          "description": "Name of the place in English"
+        },
+        "content": {
+          "type": "string",
+          "description": "Detailed description and spiritual history of the place"
+        },
+        "explanation": {
+          "type": "string",
+          "description": "How to reach and other travel/pilgrim details"
+        },
+        "latitude": {
+          "type": "number",
+          "description": "Latitude coordinate for Google Maps"
+        },
+        "longitude": {
+          "type": "number",
+          "description": "Longitude coordinate for Google Maps"
+        },
+        "photoUrl": {
+          "type": "string",
+          "description": "Image URL of the holy place"
+        },
+        "state": {
+          "type": "string",
+          "description": "State where located"
+        },
+        "district": {
+          "type": "string",
+          "description": "District where located"
+        },
+        "taluka": {
+          "type": "string",
+          "description": "Taluka where located"
+        }
+      },
+      "required": ["id", "number", "title", "content", "latitude", "longitude"]
+    },
+    "places": {
+      "title": "Sacred Place",
+      "description": "Sacred place details managed in CRUD admin console",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the place"
+        },
+        "placeNameMr": {
+          "type": "string",
+          "description": "Name of the place in Marathi"
+        },
+        "placeNameEn": {
+          "type": "string",
+          "description": "Name of the place in English"
+        },
+        "state": {
+          "type": "string",
+          "description": "State where located"
+        },
+        "district": {
+          "type": "string",
+          "description": "District where located"
+        },
+        "taluka": {
+          "type": "string",
+          "description": "Taluka where located"
+        },
+        "village": {
+          "type": "string",
+          "description": "Village where located"
+        },
+        "category": {
+          "type": "string",
+          "description": "Category of place"
+        },
+        "latitude": {
+          "type": "number",
+          "description": "Latitude coordinate"
+        },
+        "longitude": {
+          "type": "number",
+          "description": "Longitude coordinate"
+        },
+        "history": {
+          "type": "string",
+          "description": "Spiritual history in Marathi"
+        },
+        "leela": {
+          "type": "string",
+          "description": "Leela or stories related to the place in Marathi"
+        },
+        "specialInfo": {
+          "type": "string",
+          "description": "Special instructions or notes"
+        },
+        "status": {
+          "type": "string",
+          "description": "Status of the place entry, e.g. active, inactive"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Creation timestamp"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last update timestamp"
+        }
+      },
+      "required": ["placeNameMr", "placeNameEn", "latitude", "longitude"]
+    },
+    "sadhak_contact": {
+      "title": "Sadhak Contact",
+      "description": "Mahanubhav Panth sadhak contact record added by admin",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the contact"
+        },
+        "srNo": {
+          "type": "integer",
+          "description": "Sequential serial number (क्रमवारी)"
+        },
+        "location": {
+          "type": "string",
+          "description": "Village or city location"
+        },
+        "placeName": {
+          "type": "string",
+          "description": "Temple, ashram or math name"
+        },
+        "personName": {
+          "type": "string",
+          "description": "Name of the sadhak or mahant"
+        },
+        "phones": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Phone numbers list"
+        },
+        "displayPhones": {
+          "type": "string",
+          "description": "Marathi display phone numbers string"
+        },
+        "districtGroup": {
+          "type": "string",
+          "description": "District or region group"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Creation timestamp"
+        }
+      },
+      "required": ["srNo", "location", "placeName", "personName", "phones"]
+    }
+  },
+  "firestore": {
+    "/niwas_items/{niwasId}": {
+      "schema": "niwas_item",
+      "description": "Niwas and Ashram items added by admin in Niwas Kosh"
+    },
+    "/sadhak_contacts/{contactId}": {
+      "schema": "sadhak_contact",
+      "description": "Sadhak contacts added by admin"
+    },
+    "/sthan_darshan/{sthanId}": {
+      "schema": "sthan_darshan",
+      "description": "Sacred Sthan Darshan places collection"
+    },
+    "/places/{placeId}": {
+      "schema": "places",
+      "description": "Places CRUD collection"
+    },
+    "/communityPosts/{postId}": {
+      "schema": "community_post",
+      "description": "Community posts and questions"
+    },
+    "/communityPosts/{postId}/answers/{answerId}": {
+      "schema": "community_answer",
+      "description": "Answers for a community question"
+    },
+    "/communityPosts/{postId}/answers/{answerId}/replies/{replyId}": {
+      "schema": "community_reply",
+      "description": "Replies on an answer"
+    },
+    "/communityReports/{reportId}": {
+      "schema": "community_report",
+      "description": "Reported content for moderation"
+    },
+    "/users/{userId}": {
+      "schema": "user_profile",
+      "description": "Community user profiles"
+    }
+  }
+}

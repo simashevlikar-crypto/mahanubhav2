@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Gracefully handle Vite dev-server websocket events in preview environments
+      window.addEventListener('error', function(e) {
+        if (e && (e.message && (e.message.indexOf('WebSocket') !== -1 || e.message.indexOf('createWebSocketModuleRunnerTransport') !== -1) || (e.filename && e.filename.indexOf('@vite/client') !== -1))) {
+          e.preventDefault();
+        }
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        if (e && (String(e.reason).indexOf('WebSocket') !== -1 || String(e.reason && e.reason.stack).indexOf('@vite/client') !== -1)) {
+          e.preventDefault();
+        }
+      });
+    </script>
+    <title>Mahanubhav Vishwa - महानुभाव विश्व</title>
+    <meta name="description" content="A comprehensive full-stack application for the Mahanubhav Sect, containing sacred texts (Granthalaya), bhajans, discourses (Pravachan), temple directories with navigation, calendar of events, community discussion board, donation platform, and an AI spiritual assistant based on Chakradhar Swami's teachings." />
+    <meta property="og:title" content="Mahanubhav Vishwa - महानुभाव विश्व" />
+    <meta property="og:description" content="A comprehensive full-stack application for the Mahanubhav Sect, containing sacred texts (Granthalaya), bhajans, discourses (Pravachan), temple directories with navigation, calendar of events, community discussion board, donation platform, and an AI spiritual assistant based on Chakradhar Swami's teachings." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
